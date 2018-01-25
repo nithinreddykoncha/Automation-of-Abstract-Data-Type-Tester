@@ -1,0 +1,54 @@
+using namespace std;
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include "List.h"
+using namespace std;
+
+List doit () {
+    List *l = new List();
+    return *l;
+}
+
+List l = doit();
+
+states
+List
+
+A(l):
+l.size() == 0, l.empty()
+
+B(l): 
+l.size() == 1, !l.empty()
+
+C(l): 
+l.size() == 1, !l.empty()
+
+D(l): 
+l.size() == 1, !l.empty()
+
+E(l):
+l.size() > 1, !l.empty()
+
+Endstates
+
+A(l) {a}   B(l)
+A(l) {b}   C(l)
+A(l) {b}   D(l)
+A(l) {b}   E(l)
+A(l) {b}   B(l)
+B(l) {i}   E(l)
+A(l) {b}   C(l)
+B(l) {d}   D(l)
+C(l) {g}   D(l)
+E(l) {f}   B(l)
+E(l) {e}   D(l)
+D(l) {i}   B(l)
+D(l) {i}   A(l)
+D(l) {i}   B(l)
+D(l) {i}   D(l)
+D(l) {i}   E(l)
+D(l) {i}   C(l)
+
+EndTransitions
+

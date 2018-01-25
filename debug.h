@@ -1,0 +1,11 @@
+int DEBUG {0};
+#define Debug(var) if (DEBUG) cout <<  __LINE__ << ": " << #var << "=" << var << endl;
+#define Debug1(msg,var) if (DEBUG) cout << #msg << endl << __LINE__ << ": " << #var << "=" << (var) << endl;
+#define Debug2(msg,var1,var2) if (DEBUG) cout << __LINE__ << ": " << #msg << ": "  << #var1 << "=" << var1 << ", "<< #var2<< "=" << var2<< endl;
+#define Entering() if (DEBUG) cout << "Entering " << __func__  << endl;
+#define Entering1(arg1) if (DEBUG) cout << "Entering " << __func__  <<" with " << arg1 << endl;
+#define Entering2(arg1,arg2) if (DEBUG) cout << "Entering " << __func__  <<" with " << arg1 << ' ' << arg2 << endl;
+#define Leaving() if (DEBUG) cout << "Leaving " << __func__  << endl;
+#define Leaving1(arg1) if (DEBUG) cout << "Leaving " << __func__ << " with " << arg1 << endl;
+#define Leaving2(arg1,arg2) if (DEBUG) cout << "Leaving " << __func__  << " with " << arg1 << " and " << arg2 << endl;
+#define Msg(arg1) if (DEBUG) cout << __LINE__ << ": " << #arg1 << endl;
